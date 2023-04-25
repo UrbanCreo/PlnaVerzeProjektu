@@ -1,0 +1,11 @@
+Projekt není zcela dokončen. Je zapotřebí vytvořit vazbu mezi databázemi(V "Details" Chybí výpis jednotlivých pojištění u konrétního pojištěnce).
+K přístupu k pojištění se dá zatím dostat pouze skrze URL adresu: https://localhost:7249/AddInsuranceModels/Index
+
+Na lokálním serveru byly vytvoření uživatelé z toho jeden je "administrátor"
+
+Přihlašovací údaje:
+ADMIN
+jméno: admin@urban.com |heslo: Mse_V7WbTR6Lu8R
+
+USER
+jméno: user@urban.com |heslo: User@1234

@@ -1,0 +1,43 @@
+﻿@model WebApp.Models.AddInsuranceModel
+
+@{
+    ViewData["Title"] = "Odstranit pojištění";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Odstranit pojištění</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-striped" border="1">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.TypPojisteni)</th>
+                    <td>@Html.DisplayFor(model => model.TypPojisteni)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Castka)</th>
+                    <td>@Html.DisplayFor(model => model.Castka)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Predmet)</th>
+                    <td>@Html.DisplayFor(model => model.Predmet)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PlatnostOd)</th>
+                    <td>@Html.DisplayFor(model => model.PlatnostOd)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PlatnostDo)</th>
+                    <td>@Html.DisplayFor(model => model.PlatnostDo)</td>
+                </tr>
+            </table>
+        </div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+            <input type="submit" value="Odstranit" class="btn btn-danger" />
+            <a asp-action="Index" style="text-decoration: none;">Zpět</a>
+        </form>
+    </div>
+</section>

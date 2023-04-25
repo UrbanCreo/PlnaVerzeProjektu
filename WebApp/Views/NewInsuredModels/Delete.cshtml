@@ -1,0 +1,51 @@
+﻿@model WebApp.Models.NewInsuredModel
+
+@{
+    ViewData["Title"] = "Odstranit pojištěnce";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Odstranit pojištěnce</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table table-striped" border="1">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Jmeno)</th>
+                    <td>@Html.DisplayFor(model => model.Jmeno)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Prijmeni)</th>
+                    <td>@Html.DisplayFor(model => model.Prijmeni)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Email)</th>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Telefon)</th>
+                    <td>@Html.DisplayFor(model => model.Telefon)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Ulice)</th>
+                    <td>@Html.DisplayFor(model => model.Ulice)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Mesto)</th>
+                    <td>@Html.DisplayFor(model => model.Mesto)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PSC)</th>
+                    <td>@Html.DisplayFor(model => model.PSC)</td>
+                </tr>
+            </table>
+        </div>
+        <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Odstranit" class="btn btn-danger" />
+        <a asp-action="Index" style="text-decoration: none;">Zpět</a>
+        </form>
+    </div>
+</section>

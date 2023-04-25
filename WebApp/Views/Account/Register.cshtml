@@ -1,0 +1,50 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Registrace";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Registrace</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="card">
+                <div class="card-body">
+                    <form class="d-flex flex-column gap-2" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>             
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ConfirmPassword"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <input class="custom-control-input" type="checkbox" value="">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Souhlasím s obchodními podmínkami</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Registrace</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

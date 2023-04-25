@@ -1,0 +1,91 @@
+﻿@model IEnumerable<WebApp.Models.NewInsuredModel>
+
+@{
+    ViewData["Title"] = "Nový pojištěnec";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Seznam pojištěnců</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <p>
+            <a asp-action="Create" type="submit" class="btn btn-primary btn-block">Nový pojištěnec</a>
+        </p>
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Jmeno)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Prijmeni)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Telefon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ulice)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mesto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PSC)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Jmeno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prijmeni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ulice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mesto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PSC)
+                    </td>
+                    <td>
+                        <a asp-action="Details" type="submit" class="btn btn-primary btn-block" asp-route-id="@item.ID">Detail</a>
+                        <a asp-action="Edit" type="submit" class="btn btn-warning btn-block" asp-route-id="@item.ID">Editovat</a>
+                        <a asp-action="Delete" type="submit" class="btn btn-danger btn-block" asp-route-id="@item.ID">Odstranit</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <nav aria-label="Stránkování">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <span aria-hidden="true" class="page-link">&laquo;</span>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item disabled">
+                <span aria-hidden="true" class="page-link">&raquo;</span>
+            </li>
+        </ul>
+    </nav>
+</section>

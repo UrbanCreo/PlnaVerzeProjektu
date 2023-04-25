@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Domů";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Hlavní stránka</h2>
+        <hr />
+    </div>
+    <div class="container py-2">
+        <div class="row gx-4 gx-lg-5 align-items-center my-2">
+            <div class="col-lg-7">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="~/images/BlueDarkLogo900x400.png" alt="DarkLogo" />
+            </div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-bold">"Vaše jistota v každém okamžiku"</h1>
+                <p>Ještě nemáte u nás účet? Zaregistrujte se!</p>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <a asp-area="" asp-controller="Account" asp-action="Register" class="text-white text-decoration-none">Vytvořit účet</a>
+                </button>
+            </div>
+        </div>
+        <hr />
+        <div class="card text-white bg-secondary my-5 py-3 text-center">
+            <div class="card-body"><p class="text-white m-0">"Zabezpečte svou budoucnost s Urban Insurance - vaším spolehlivým partnerem v pojištění"<br />Využijte naše inovativní služby a klidně se soustřeďte na to, co je pro vás důležité - my se postaráme o zbytek.</p></div>
+        </div>
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Typy pojištění</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" asp-area="" asp-controller="Home" asp-action="Insurance">Informace</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">Online nabídky</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Informace</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                         <h2 class="card-title">Aktuality a novinky</h2>
+                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+                    </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Informace</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js"></script>
+<script src="~/lib/lightbox2/js/lightbox.min.js" asp-append-version="true"></script>

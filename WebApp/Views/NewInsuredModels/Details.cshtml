@@ -1,0 +1,84 @@
+﻿@model WebApp.Models.NewInsuredModel
+
+@{
+    ViewData["Title"] = "Detail pojištěnce";
+}
+
+<article>
+<div class="container mt-4 user-role admin">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="mt-2">
+                <img id="preview" src="~/images/profileImage.png" class="rounded-0 border border-dark" width="182" height="210" alt="Profilový obrázek">
+            </div>
+        </div>
+            <div class="col-md-9">
+                <h2 style="font-weight: bold">@Model.Jmeno @Model.Prijmeni</h2>
+            <hr />
+            <div class="col-md-8 col-md-offset-2">
+                <table class="table table-striped" border="1">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Ulice)</th>
+                        <td>@Html.DisplayFor(model => model.Ulice)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Mesto)</th>
+                        <td>@Html.DisplayFor(model => model.Mesto)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.PSC)</th>
+                        <td>@Html.DisplayFor(model => model.PSC)</td>
+                    </tr>
+                    <tr class="col-md-6">
+                        <th>@Html.DisplayNameFor(model => model.Email)</th>
+                        <td>@Html.DisplayFor(model => model.Email)</td>
+                    </tr>
+                    <tr class="col-md-6">
+                        <th>@Html.DisplayNameFor(model => model.Telefon)</th>
+                        <td>@Html.DisplayFor(model => model.Telefon)</td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
+    </div>
+</div>
+</article>
+<div class="container mt-4">
+    <h3>Sjednaná pojištění</h3>
+    <hr />
+</div>
+<div class="container py-4">
+    <p>
+        <a asp-area="" asp-controller="AddInsuranceModels" asp-action="Create" type="submit" class="btn btn-primary">Přidat pojištění</a>
+    </p>
+    <section class="container py-4">
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>Typ pojištění</th>
+                    <th>Předmět</th>
+                    <th>Částka</th>
+                    <th>PlatnostOd</th>
+                    <th>PlatnostDo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button type="button" asp-controller="AddInsuranceModels" asp-action="Edit" class="btn btn-warning">Editovat</button>
+                        <button type="button" asp-controller="AddInsuranceModels" asp-action="Delete" class="btn btn-danger">Odstranit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <a asp-action="Index" type="submit" class="btn btn-success btn-block" asp-route-id="@Model?.ID">Uložit</a>
+        </div>
+    </section>
+</div>

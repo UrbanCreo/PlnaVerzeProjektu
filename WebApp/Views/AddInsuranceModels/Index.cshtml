@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebApp.Models.AddInsuranceModel>
+
+@{
+    ViewData["Title"] = "Sjednaná pojištění";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Sjednaná pojištění</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <p>
+            <a asp-action="Create" type="submit" class="btn btn-primary btn-block">Přidat pojištění</a>
+        </p>
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TypPojisteni)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Castka)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Predmet)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PlatnostOd)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PlatnostDo)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TypPojisteni)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Castka)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Predmet)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlatnostOd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlatnostDo)
+                    </td>
+                    <td>
+                        <a asp-action="Details" type="submit" class="btn btn-primary btn-block" asp-route-id="@item.ID">Detail</a>
+                        <a asp-action="Edit" type="submit" class="btn btn-warning btn-block" asp-route-id="@item.ID">Editovat</a>
+                        <a asp-action="Delete" type="submit" class="btn btn-danger btn-block" asp-route-id="@item.ID">Odstranit</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    </div>
+<div>
+    <a asp-area="" asp-controller="NewInsuredModels" asp-action="Details" type="submit">Zpět</a>
+</div>
+</section>

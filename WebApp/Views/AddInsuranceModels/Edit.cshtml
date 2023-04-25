@@ -1,0 +1,54 @@
+﻿@model WebApp.Models.AddInsuranceModel
+
+@{
+    ViewData["Title"] = "Editace pojištění";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Editace pojištění</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="ID" />
+                        <div class="form-group">
+                            <label asp-for="TypPojisteni" class="control-label"></label>
+                            <input asp-for="TypPojisteni" class="form-control" />
+                            <span asp-validation-for="TypPojisteni" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Castka" class="control-label"></label>
+                            <input asp-for="Castka" class="form-control" />
+                            <span asp-validation-for="Castka" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Predmet" class="control-label"></label>
+                            <input asp-for="Predmet" class="form-control" />
+                            <span asp-validation-for="Predmet" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PlatnostOd" class="control-label"></label>
+                            <input asp-for="PlatnostOd" class="form-control" />
+                            <span asp-validation-for="PlatnostOd" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PlatnostDo" class="control-label"></label>
+                            <input asp-for="PlatnostDo" class="form-control" />
+                            <span asp-validation-for="PlatnostDo" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Uložit" class="btn btn-success" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

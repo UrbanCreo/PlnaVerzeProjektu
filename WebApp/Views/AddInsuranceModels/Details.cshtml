@@ -1,0 +1,44 @@
+﻿@model WebApp.Models.AddInsuranceModel
+
+@{
+    ViewData["Title"] = "Detail pojištění";
+}
+
+<article>
+     <div class="container mt-4">
+        <h2>Detail pojištění</h2>
+        <hr />
+    </div>
+    <div class="container mt-4 user-role admin">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <table class="table table-striped" border="1">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.TypPojisteni)</th>
+                        <td>@Html.DisplayFor(model => model.TypPojisteni)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Castka)</th>
+                        <td>@Html.DisplayFor(model => model.Castka)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Predmet)</th>
+                        <td>@Html.DisplayFor(model => model.Predmet)</td>
+                    </tr>
+                    <tr class="col-md-6">
+                        <th>@Html.DisplayNameFor(model => model.PlatnostOd)</th>
+                        <td>@Html.DisplayFor(model => model.PlatnostOd)</td>
+                    </tr>
+                    <tr class="col-md-6">
+                        <th>@Html.DisplayNameFor(model => model.PlatnostDo)</th>
+                        <td>@Html.DisplayFor(model => model.PlatnostDo)</td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
+        <div>
+            <a asp-action="Edit" type="submit" class="btn btn-warning" asp-route-id="@Model?.ID">Editovat</a>
+            <a asp-action="Index">Zpět</a>
+        </div>
+    </div>
+</article>

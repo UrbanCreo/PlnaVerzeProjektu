@@ -1,0 +1,81 @@
+﻿@model WebApp.Models.NewInsuredModel
+
+@{
+    ViewData["Title"] = "Evidence nového pojištěnce";
+}
+
+<section>
+    <div class="container mt-4">
+        <h2>Evidence nového pojištěnce</h2>
+        <hr />
+    </div>
+    <div class="container py-4">
+        <div class="col-md-4 col-md-offset-4">
+            <form asp-action="Create">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label asp-for="Jmeno"></label>
+                                <input asp-for="Jmeno" class="form-control" />
+                                <span asp-validation-for="Jmeno" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label asp-for="Prijmeni"></label>
+                                <input asp-for="Prijmeni" class="form-control" />
+                                <span asp-validation-for="Prijmeni" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label asp-for="Telefon"></label>
+                                    <input asp-for="Telefon" class="form-control" />
+                                    <span asp-validation-for="Telefon" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label asp-for="Ulice"></label>
+                                    <input asp-for="Ulice" class="form-control" />
+                                    <span asp-validation-for="Ulice" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label asp-for="Mesto"></label>
+                                    <input asp-for="Mesto" class="form-control" />
+                                    <span asp-validation-for="Mesto" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-group">
+                                    <label asp-for="PSC"></label>
+                                    <input asp-for="PSC" class="form-control" />
+                                    <span asp-validation-for="PSC" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <br />
+                            <button type="submit" class="btn btn-success">Uložit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
